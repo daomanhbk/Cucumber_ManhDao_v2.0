@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>JAVA CUCUMBER REPORT - BANK GURU</td>
+              <td>1</td>
+            <td>23 Oct 2019, 19:36</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_click_submit_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2190127989">2s 190ms</td>
+              <td class="duration" data-value="2190127989">2s 190ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_get_text_UserID()</td>
+              <td>1</td>
+              <td class="duration" data-value="157501383">157ms</td>
+              <td class="duration" data-value="157501383">157ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_city(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="529689834">529ms</td>
+              <td class="duration" data-value="264844917">264ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_customer_name(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="414190794">414ms</td>
+              <td class="duration" data-value="207095397">207ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_email(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="179113641">179ms</td>
+              <td class="duration" data-value="179113641">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_phone(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="516520641">516ms</td>
+              <td class="duration" data-value="258260320">258ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_pin(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="620297631">620ms</td>
+              <td class="duration" data-value="155074407">155ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_data_to_state(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="455898350">455ms</td>
+              <td class="duration" data-value="227949175">227ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="356141903">356ms</td>
+              <td class="duration" data-value="356141903">356ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_city()</td>
+              <td>1</td>
+              <td class="duration" data-value="175047612">175ms</td>
+              <td class="duration" data-value="175047612">175ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_customer_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="202018944">202ms</td>
+              <td class="duration" data-value="202018944">202ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_email()</td>
+              <td>1</td>
+              <td class="duration" data-value="296093319">296ms</td>
+              <td class="duration" data-value="296093319">296ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="298127920">298ms</td>
+              <td class="duration" data-value="298127920">298ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_pin()</td>
+              <td>1</td>
+              <td class="duration" data-value="127360375">127ms</td>
+              <td class="duration" data-value="127360375">127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_space_to_state()</td>
+              <td>1</td>
+              <td class="duration" data-value="138591231">138ms</td>
+              <td class="duration" data-value="138591231">138ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="148566418">148ms</td>
+              <td class="duration" data-value="148566418">148ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_city()</td>
+              <td>1</td>
+              <td class="duration" data-value="148332279">148ms</td>
+              <td class="duration" data-value="148332279">148ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_customer_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="325672256">325ms</td>
+              <td class="duration" data-value="325672256">325ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_email()</td>
+              <td>1</td>
+              <td class="duration" data-value="350505670">350ms</td>
+              <td class="duration" data-value="350505670">350ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="237230587">237ms</td>
+              <td class="duration" data-value="237230587">237ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_pin()</td>
+              <td>1</td>
+              <td class="duration" data-value="134614062">134ms</td>
+              <td class="duration" data-value="134614062">134ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_key_tab_to_state()</td>
+              <td>1</td>
+              <td class="duration" data-value="173978125">173ms</td>
+              <td class="duration" data-value="173978125">173ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_address(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="248422655">248ms</td>
+              <td class="duration" data-value="248422655">248ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_city(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="213573151">213ms</td>
+              <td class="duration" data-value="213573151">213ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_customer_name(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="335933062">335ms</td>
+              <td class="duration" data-value="335933062">335ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_date_of_birth(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="346984083">346ms</td>
+              <td class="duration" data-value="346984083">346ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_email(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="272813888">272ms</td>
+              <td class="duration" data-value="272813888">272ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="198792497">198ms</td>
+              <td class="duration" data-value="198792497">198ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_phone(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="102331257">102ms</td>
+              <td class="duration" data-value="102331257">102ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_pin(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="434982160">434ms</td>
+              <td class="duration" data-value="434982160">434ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_input_with_data_to_state(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="267934725">267ms</td>
+              <td class="duration" data-value="267934725">267ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.i_open_New_Customer_page()</td>
+              <td>28</td>
+              <td class="duration" data-value="27970277196">27s 970ms</td>
+              <td class="duration" data-value="998938471">998ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CreateCustomerSteps.verify_successfully_with_a_message(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="1496021246">1s 496ms</td>
+              <td class="duration" data-value="53429330">053ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.close_browser()</td>
+              <td>1</td>
+              <td class="duration" data-value="1181350291">1s 181ms</td>
+              <td class="duration" data-value="1181350291">1s 181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_click_to_submit_button()</td>
+              <td>17</td>
+              <td class="duration" data-value="24608850969">24s 608ms</td>
+              <td class="duration" data-value="1447579468">1s 447ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_input_customer_id()</td>
+              <td>17</td>
+              <td class="duration" data-value="3561392584">3s 561ms</td>
+              <td class="duration" data-value="209493681">209ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_input_data_to_customer_id(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="464094583">464ms</td>
+              <td class="duration" data-value="232047291">232ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_input_key_tab_to_customer_id()</td>
+              <td>1</td>
+              <td class="duration" data-value="373862677">373ms</td>
+              <td class="duration" data-value="373862677">373ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_open_Edit_Customer_page()</td>
+              <td>20</td>
+              <td class="duration" data-value="23530614750">23s 530ms</td>
+              <td class="duration" data-value="1176530737">1s 176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_data_to_city(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="741618731">741ms</td>
+              <td class="duration" data-value="370809365">370ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_data_to_email(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="296656802">296ms</td>
+              <td class="duration" data-value="296656802">296ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_data_to_phone(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="402995553">402ms</td>
+              <td class="duration" data-value="402995553">402ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_data_to_pin(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="1207873446">1s 207ms</td>
+              <td class="duration" data-value="402624482">402ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_data_to_state(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="639971903">639ms</td>
+              <td class="duration" data-value="319985951">319ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_space_to_email()</td>
+              <td>1</td>
+              <td class="duration" data-value="214520280">214ms</td>
+              <td class="duration" data-value="214520280">214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="497721564">497ms</td>
+              <td class="duration" data-value="497721564">497ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_city()</td>
+              <td>1</td>
+              <td class="duration" data-value="461891784">461ms</td>
+              <td class="duration" data-value="461891784">461ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_email()</td>
+              <td>1</td>
+              <td class="duration" data-value="457523563">457ms</td>
+              <td class="duration" data-value="457523563">457ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="321919351">321ms</td>
+              <td class="duration" data-value="321919351">321ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_pin()</td>
+              <td>1</td>
+              <td class="duration" data-value="284523951">284ms</td>
+              <td class="duration" data-value="284523951">284ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.i_update_key_tab_to_state()</td>
+              <td>1</td>
+              <td class="duration" data-value="467290705">467ms</td>
+              <td class="duration" data-value="467290705">467ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">EditCustomerSteps.verify_successfully_with_a_message(String)</td>
+              <td>19</td>
+              <td class="duration" data-value="1141841305">1s 141ms</td>
+              <td class="duration" data-value="60096910">060ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomeSteps.verify_successfully_with_message(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="221847665">221ms</td>
+              <td class="duration" data-value="221847665">221ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LogInSteps.i_log_in_system()</td>
+              <td>1</td>
+              <td class="duration" data-value="2519722405">2s 519ms</td>
+              <td class="duration" data-value="2519722405">2s 519ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LogInSteps.i_navigate_to_Guru_bank_and_click_Here_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="18953888609">18s 953ms</td>
+              <td class="duration" data-value="18953888609">18s 953ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RegisterSteps.i_click_to_submit_account()</td>
+              <td>1</td>
+              <td class="duration" data-value="2575718007">2s 575ms</td>
+              <td class="duration" data-value="2575718007">2s 575ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RegisterSteps.i_get_email_and_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="193847748">193ms</td>
+              <td class="duration" data-value="193847748">193ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RegisterSteps.i_input_email(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="233772471">233ms</td>
+              <td class="duration" data-value="233772471">233ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RegisterSteps.i_navigate_to_Log_In_page(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1512442977">1s 512ms</td>
+              <td class="duration" data-value="1512442977">1s 512ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>59</td>
+            <td>194</td>
+            <td class="duration">2m 7s 131ms</td>
+            <td class="duration">655ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
